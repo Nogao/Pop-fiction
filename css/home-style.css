@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("fonts/Montserrat-Regular.otf");
+}
+
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("fonts/Montserrat-Bold.otf");
+}
+
+@font-face {
+  font-family: "montserrat-italic";
+  src: url("fonts/Montserrat-MediumItalic.otf");
+}
+
+body {
+  height: 100vh;
+  background: #000;
+}
+
+/*logIn page*/
+.log {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: montserrat-regular;
+  color: #cccccc;
+}
+
+.sign-in, .sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  display: none;
+  font-family: montserrat-regular;
+  color: #cccccc;
+}
+
+.img-logo-container {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.logo-img {
+  width: 50%;
+}
+
+.create-account {
+  font-family: montserrat-regular;
+  color: #cccccc;
+  padding-right: 15px;
+}
+
+.login-account {
+  font-family: montserrat-regular;
+  color: #cccccc;
+  padding-left: 15px;
+}
+
+.separation {
+  height: 20px;
+  border-left: 1px solid #cccccc;
+}
+
+.create-account:hover {
+  color: #FDC00C;
+}
+
+.login-account:hover {
+  color: #FDC00C;
+}
+
+.username-field {
+  width: 200px;
+  height: 35px;
+  border-radius: 35px;
+  border: 2px solid #000;
+  margin: 10px 0 10px 20px;
+  padding-left: 10px;
+  font-family: montserrat-regular;
+  color: #444;
+}
+
+.pw-field {
+  width: 200px;
+  height: 35px;
+  border-radius: 35px;
+  border: 2px solid #000;
+  margin: 10px 0 10px 20px;
+  padding-left: 10px;
+  font-family: montserrat-regular;
+  color: #444;
+}
+
+.pw-field:hover, .username-field:hover {
+  border: 2px solid #FDC00C;
+}
