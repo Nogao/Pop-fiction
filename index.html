@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pop-Fiction</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body class="body">
+  <header class="header-container">
+    <div class="nav-container">
+      <div class="logo-container">
+        <img class="logo-nav" src="img/logo.png" alt="logo du site">
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-items nav-home"><a class="nav-list-link" href="#">accueil</a></li>
+        <li class="nav-list-items nav-categories"><a class="nav-list-link" href="#">catégories</a></li>
+        <li class="nav-list-items"><a class="nav-list-link" href="#">Les populaires</a></li>
+        <li class="nav-list-items"><a class="nav-list-link" href="#">Les nouveautés</a></li>
+        <li class="nav-list-items"><a class="nav-list-link" href="#">forum</a></li>
+      </ul>
+      <div class="search-bar-container">
+        <input class="search-bar" type="text" name="" placeholder="Rechercher..." value="">
+      </div>
+      <div class="dropdown-menu-container">
+        <div class="icon-user-container">
+          <img src="img/profile.png" alt="" class="icon-user">
+        </div>
+        <div class="dropdown-content">
+          <a href="#" class="link">Mon profil</a>
+          <a href="#" class="link">Mes coups de coeur</a>
+          <a href="#" class="link">Mon compte</a>
+          <a href="#" class="link">Déconnexion</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="body-container">
+    <div class="main-img-container">
+      <ul class="slider-container">
+          <li class="slide showing"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide .test"></li>
+      </ul>
+      <div class="modal">
+        <div class="modal-close-button">
+          <img src="img/close.png" alt="close button" class="close-button-modal">
+        </div>
+        <div class="modal-container">
+          <div class="img-modal-container">
+          </div>
+          <div class="txt-modal-container">
+            <div class="modal-header">
+              <p class="text-modal-header description-part">Fiche descriptive</p>
+              <p>|</p>
+              <p class="text-modal-header reviews-part">les avis</p>
+            </div>
+            <div class="description-modal-container">
+              <h1 class="title"></h1>
+              <h2 class="duration"></h2>
+              <h3 class="date"></h3>
+              <p class="description"></p>
+              <div class="video-src-container">
+                <a class="video-src" href="">voir le film</a>
+              </div>
+            </div>
+            <div class="reviews-modal-container">
+              <div class="rated-movie">
+                <h1 class="title-year"></h1>
+                <p class="global-note"></p>
+              </div>
+              <div class="stars-review">
+                <p class="aka">Chef-d'oeuvre :</p>
+                <p class="stars">* * * * *</p>
+                <p class="voteNumber">7 votes</p>
+              </div>
+              <div class="stars-review">
+                <p class="aka">Très bon :</p>
+                <p class="stars">* * * *</p>
+                <p class="voteNumber">23 votes</p>
+              </div>
+              <div class="stars-review">
+                <p class="aka">Bon :</p>
+                <p class="stars">* * *</p>
+                <p class="voteNumber">16 votes</p>
+              </div>
+              <div class="stars-review">
+                <p class="aka">Moyen :</p>
+                <p class="stars">* *</p>
+                <p class="voteNumber">8 votes</p>
+              </div>
+              <div class="stars-review">
+                <p class="aka">À oublier :</p>
+                <p class="stars">*</p>
+                <p class="voteNumber">6 votes</p>
+              </div>
+              <h5 class="last-reviews-title">Les derniers avis :</h5>
+              <div class="main-reviews-container">
+                <div class="last-review-container">
+                  <div class="profile-container">
+                    <p class="name">Lindsey S.</p>
+                    <p class="location">Seattle, USA</p>
+                    <p class="age">26 ans</p>
+                  </div>
+                  <div class="post-container">
+                    <div class="rate-info">
+                      <div class="member-rate">* * * * *</div>
+                      <div class="post-date">27 Nov 2017</div>
+                    </div>
+                    <p class="post">Ce film est top ! Les acteurs se donnent à fond et les effets spéciaux très bien réalisés !! BRAVO !!!</p>
+                  </div>
+                </div>
+                <div class="last-review-container">
+                  <div class="profile-container">
+                    <p class="name">Matt K.</p>
+                    <p class="location">Lyon, France</p>
+                    <p class="age">32 ans</p>
+                  </div>
+                  <div class="post-container">
+                    <div class="rate-info">
+                      <div class="member-rate">* * *</div>
+                      <div class="post-date">15 Nov 2017</div>
+                    </div>
+                    <p class="post">Ce film n'est pas un chef-d'oeuvre mais il se laisse gentillement regarder.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Playercontainer">
+        <div class="video-close-button">
+          <img src="img/close.png" alt="close button" class="close-button-video">
+        </div>
+        <div class="video-player">
+          <video class="video" src="test.mp4"></video>
+        </div>
+        <div class="controlPanel">
+          <button class="play-pause-btn" onclick="toggleVideo();"><img class="playbouton" src="img/playb.svg" alt=""></button>
+          <button class="stop" onclick="stopvideo();"><img class="stopbouton" src="img/stopbouton.svg" alt=""></button>
+          <progress class="progressBar" min="0" max="100" value="0"></progress>
+          <span class="curtimetexte">0:00</span> / <span class="durtimetexte">0:00</span>
+          <button class="fullscreen" onclick="fullscreen('player'); return false"><img class="fullscreenimg" src="img/fullscreen.svg" alt=""></button>
+          <button class="mutebtn" onclick="mute();"><img class="muteimg" src="img/speaker.svg" alt=""></button>
+          <input class="volumeBar" onchange="setvolume();" type="range" min="0" max="100" value="25" /></input>
+        </div>
+      </div>
+    </div>
+    <div class="movies-presentation">
+      <p class="tag-movies">les films</p>
+      <ul class="category-tag-list">
+        <p class="tag-categories">catégories ></p>
+        <li class="action-tag tag-item">Action</li>
+        <li class="anim-tag tag-item">Animation</li>
+        <li class="comedy-tag tag-item">Comedie</li>
+        <li class="horror-tag tag-item">Horreur/Thriller</li>
+        <li class="all-tag tag-item">Tout voir</li>
+      </ul>
+      <div class="row-container"></div>
+    </div>
+  </div>
+  <footer class="footer-container">
+    <div class="row-container">
+      <div class="footer-left-container">
+        <div class="footer-logo-container">
+          <img src="img/logo.png" alt="logo du site" class="footer-logo">
+        </div>
+        <p class="credit"> Tous droits réservés. © 2017 (Groupe 18)</p>
+      </div>
+      <div class="footer-middle-container">
+        <ul>
+          <p class="footer-nav-title">Navigation</p>
+          <li class="footer-nav-item"><a href="" class="footer-link">Voir les films</a></li>
+          <li class="footer-nav-item"><a href="" class="footer-link">Télécharger les films</a></li>
+          <li class="footer-nav-item"><a href="" class="footer-link">Forum</a></li>
+          <li class="footer-nav-item"><a href="" class="footer-link">F.A.Q.</a></li>
+        </ul>
+      </div>
+      <div class="footer-right-container">
+        <p class="footer-nav-title">Nous suivre</p>
+        <div class="footer-icons-container">
+          <div class="icon-container"><a href="" class="icon-link"><img src="img/facebook.png" alt="" class="footer-icon"></a></div>
+          <div class="icon-container"><a href="" class="icon-link"><img src="img/twitter.png" alt="" class="footer-icon"></a></div>
+          <div class="icon-container"><a href="" class="icon-link"><img src="img/instagram.png" alt="" class="footer-icon"></a></div>
+          <div class="icon-container"><a href="" class="icon-link"><img src="img/youtube.png" alt="" class="footer-icon"></a></div>
+        </div>
+        <div class="newsletter-container">
+          <p class="newsletter-text">S'abonner à la newsletter</p>
+          <div class="newsletter-subscribe">
+            <input class="newsletter-input" type="text" name="" placeholder="votre adresse mail">
+            <button class="newsletter-button" type="button" name="button">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript" src="javascript/data.js"></script>
+  <script type="text/javascript" src="javascript/lecteurVideo.js"></script>
+  <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>
